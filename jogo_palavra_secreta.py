@@ -1,5 +1,8 @@
+import os
+
 contador_tentativas = 0
 palavra_secreta = input('Escreva uma palavra para ser adivinhada pelo outro jogador: ')
+os.system('cls')
 letra_descoberta = ''
 palavra_descoberta = ''
 
@@ -28,4 +31,8 @@ while True:
     if palavra_secreta == palavra_formada:
         print(f'Parabéns! A palavra secreta era: {palavra_secreta}')
         print(f'Tentativas: {contador_tentativas}x')
-        break
+        contador_tentativas = 0
+        palavra_secreta = input('Escreva uma palavra para ser adivinhada pelo outro jogador: ')
+        os.system('cls')
+        letra_descoberta = ''
+        palavra_descoberta = ''
